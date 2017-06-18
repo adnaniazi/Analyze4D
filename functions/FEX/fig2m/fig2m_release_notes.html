@@ -1,0 +1,133 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML is auto-generated from an M-file.
+To make changes, update the M-file and republish this document.
+      --><title>GENERATE_M_FILE - Release Notes</title><meta name="generator" content="MATLAB 7.10"><meta name="date" content="2010-04-14"><meta name="m-file" content="fig2m_release_notes"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>GENERATE_M_FILE - Release Notes</h1><!--introduction--><div><ul><li><b>Version</b> : 1.0</li><li><b>Created</b> : 10/05/2006</li><li><b>Modified</b>: 14/04/2010</li><li><b>Author</b>  : Thomas Montagnon (The MathWorks France)</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">What's new?</a></li><li><a href="#2">Function Call</a></li><li><a href="#3">Future versions</a></li></ul></div><h2>What's new?<a name="1"></a></h2><p><b>V1.0</b></p><div><ul><li>Add support for <i>uitoolbar</i>, <i>uipushtool</i> and <i>uitoggletool</i></li></ul></div><p><b>V0.9</b></p><div><ul><li>Add support for <i>uitable</i> controls</li></ul></div><p><b>V0.8</b></p><div><ul><li>Change the function name from <i>generate_m_file</i> to <i>fig2m</i></li></ul></div><p><b>V0.7</b></p><div><ul><li>Bug corrected for generation of <i>String</i> property value containing new line and ' characters.</li></ul></div><p><b>V0.5</b></p><div><ul><li>Add support for <i>UserData</i> property</li></ul></div><p><b>V0.3</b></p><div><ul><li>Only the properties that are different from their default values are set</li><li>New function call with no arguments. The function will ask you for them</li><li>Support the "Use default system background color" feature</li><li>Support the automatic Callback Generation</li></ul></div><p><b>V0.2</b></p><div><ul><li>The function now sets only the properties that differ from their default values</li><li>Now you can call the function with no arguments. The input parameters will be asked to you</li><li>The function supports the "Use default system background color" feature</li></ul></div><h2>Function Call<a name="2"></a></h2><p><tt>&gt;&gt; outputFile = fig2m(guiName,outputDir,syscolorfig,cb_gen);</tt></p><div><ul><li>guiName     -&gt; Name of the Fig-File (absolute or relative path)</li><li>outputDir   -&gt; Directory where the generated M-File will be saved</li><li>syscolorfig -&gt; Use system default background color (true or false)</li><li>cb_gen      -&gt; Boolean value: true if you want to generate callbacks</li><li>outputFile  -&gt; Name of the generated M-File</li></ul></div><p><tt>&gt;&gt; fig2m</tt></p><div><ul><li>If you call the function with no input arguments it will ask you for the parameters.</li></ul></div><h2>Future versions<a name="3"></a></h2><div><ul><li>Adding support for other callbacks / controls</li></ul></div><p class="footer"><br>
+      Published with MATLAB&reg; 7.10<br></p></div><!--
+##### SOURCE BEGIN #####
+%% GENERATE_M_FILE - Release Notes
+%
+% * *Version* : 1.0
+% * *Created* : 10/05/2006
+% * *Modified*: 14/04/2010
+% * *Author*  : Thomas Montagnon (The MathWorks France)
+
+%% What's new?
+%
+% *V1.0*
+% 
+% * Add support for _uitoolbar_, _uipushtool_ and _uitoggletool_
+%
+% *V0.9*
+%
+% * Add support for _uitable_ controls
+%
+% *V0.8*
+%
+% * Change the function name from _generate_m_file_ to _fig2m_
+%
+% *V0.7*
+%
+% * Bug corrected for generation of _String_ property value containing new line
+% and ' characters.
+%
+% *V0.5*
+%
+% * Add support for _UserData_ property
+%
+% *V0.3*
+%
+% * Only the properties that are different from their default values are set
+% * New function call with no arguments. The function will ask you for them
+% * Support the "Use default system background color" feature
+% * Support the automatic Callback Generation
+%
+% *V0.2*
+%
+% * The function now sets only the properties that differ from their default
+% values
+% * Now you can call the function with no arguments. The input parameters will
+% be asked to you
+% * The function supports the "Use default system background color" feature
+%
+
+%% Function Call
+%
+% |>> outputFile = fig2m(guiName,outputDir,syscolorfig,cb_gen);|
+%
+% * guiName     -> Name of the Fig-File (absolute or relative path)
+% * outputDir   -> Directory where the generated M-File will be saved
+% * syscolorfig -> Use system default background color (true or false)
+% * cb_gen      -> Boolean value: true if you want to generate callbacks
+% * outputFile  -> Name of the generated M-File
+%
+% |>> fig2m|
+%
+% * If you call the function with no input arguments it will ask you for the
+% parameters.
+
+%% Future versions
+%
+% * Adding support for other callbacks / controls
+##### SOURCE END #####
+--></body></html>
